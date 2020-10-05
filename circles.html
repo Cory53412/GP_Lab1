@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Canvas</title>
+
+   <style type="text/css">
+
+   </style>
+
+</head>
+
+<body>
+
+   <canvas id="canvasOne" style="border:1px solid #000000;" width = "280"  height = "170" canvas>
+
+   <script type="text/javascript">
+      // Gets a handle to the element with id canvasOne.
+      var canvas = document.getElementById("canvasOne");
+      // Set the canvas up for drawing in 2D.
+      var ctx = canvas.getContext("2d");
+
+      //Add name to canvas
+      ctx.font = "10px Arial";
+      ctx.fillText("Cory O'Donoghue", 180, 30);
+
+      // Create a Circle
+      ctx.beginPath();
+      ctx.arc(150, 85, 80, 0, 6.28, false); //only works with 6.14 not MATH.PI
+      ctx.strokeStyle = "#000000";
+      ctx.fillStyle = "#0000ff";
+      ctx.fillStyle = 'rgba(0,0, 200, 0.5)';
+      ctx.linewidth = 50;
+      ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(150, 105, 20, 0, 6.28, false); //only works with 6.14 not MATH.PI
+      ctx.strokeStyle = "#000000";
+      ctx.fillStyle = "#0000ff";
+      ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+      ctx.linewidth = 15;
+      ctx.strokeStyle = '#ff0000';
+      ctx.stroke();
+      ctx.fill();
+
+      //creating a triangle
+      ctx.beginPath();
+      ctx.moveTo(150, 5);
+      ctx.lineTo(100, 100);
+      ctx.lineTo(200, 100);
+      ctx.lineTo(150, 5);
+      ctx.fillStyle = 'rgba(0, 190,0 , 0.7)';
+      ctx.fill();
+      ctx.stroke();//This function darws the shape
+
+
+      // Create a filled rectangle 
+      ctx.fillStyle = 'rgba(0,90,150,0.8)';
+      ctx.fillRect(130, 50, 40, 45);
+
+
+   </script>
+
+</body>
+
+</html>
